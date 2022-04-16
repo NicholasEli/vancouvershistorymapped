@@ -1,6 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;700;900&display=swap');
 @import '_reset.scss';
 @import '_variables.scss';
 
 body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	overflow-x: hidden;
+
+	* {
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	p {
+		font-size: 40px;
+		text-transform: uppercase;
+	}
 }
