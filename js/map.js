@@ -1,10 +1,8 @@
 export default Map = () => {
 	const map = L.map('map', {
-		center: [51.505, -0.09],
-		zoom: 13,
+		center: [45.6325949, -122.666855],
+		zoom: 15,
 	});
-
-	map.setView([51.505, -0.09], 13);
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
