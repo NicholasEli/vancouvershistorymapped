@@ -4,10 +4,27 @@ export default Map = () => {
 		zoom: 15,
 	});
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution:
-			'&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
-	}).addTo(map);
+	const googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+		maxZoom: 20,
+		subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+	});
+	googleStreets.addTo(map);
+
+	// Satelite Layer
+	const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+		maxZoom: 20,
+		subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+	});
+	googleSat.addTo(map);
+
+	const baseLayers = {
+		Satellite: googleSat,
+		'Google Map': googleStreets,
+		//'Water Color': Stamen_Watercolor,
+		//OpenStreetMap: osm,
+	};
+
+	L.control.layers(baseLayers).addTo(map);
+
 	console.log('---Initializing Map');
 };
