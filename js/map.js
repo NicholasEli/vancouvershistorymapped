@@ -27,9 +27,9 @@ const Stamen_Terrain = L.tileLayer(
  * https://leafletjs.com/reference.html
  * @return {object} return map object
  */
-export const Map = () => {
+export const Map = function ({ latitude, longitude }) {
 	const map = L.map('map', {
-		center: [45.6325949, -122.666855],
+		center: [latitude, longitude],
 		zoom: 17,
 		minZoom: 17,
 		maxZoom: 17,
