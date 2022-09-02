@@ -4,6 +4,30 @@ $md: 750px;
 $lg: 950px;
 $xl: 1200px;
 
+$Urban: rgb(239, 239, 239);
+$DrylandCropland: rgb(222, 224, 190);
+$IrrigatedCropland: rgb(213, 224, 164);
+$MixedDryland: rgb(0, 0, 0);
+$CroplandGrassland: rgb(213, 224, 164);
+$CroplandWoodland: rgb(9, 174, 132);
+$Grassland: rgb(222, 224, 190);
+$Shrubland: rgb(221, 224, 206);
+$MixedShrubland: rgb(221, 224, 206);
+$Savanna: rgb(222, 224, 190);
+$DeciduousBroadleaf: rgb(43, 174, 103);
+$DeciduousNeedleleaf: rgb(43, 174, 103);
+$EvergreenBroadleaf: rgb(43, 174, 103);
+$EvergreenNeedleleaf: rgb(43, 174, 103);
+$MixedForest: rgb(43, 174, 103);
+$WaterBodies: rgb(222, 224, 190);
+$HerbaceousWetland: rgb(0, 0, 0);
+$WoodedWetland: rgb(0, 0, 0);
+$Barrenor: rgb(239, 243, 217);
+$HerbaceousTundra: rgb(0, 0, 0);
+$WoodedTundra: rgb(43, 174, 103);
+$MixedTundra: rgb(222, 224, 190);
+$BareGround: rgb(0, 0, 0);
+
 $text: #595958;
 $light-text: #262626;
 $stroke: #e5e5e3;
@@ -19,3 +43,29 @@ $blue: #307296;
 $primary: $blue;
 
 $padding: 16px;
+
+:root {
+	--Urban: #{$Urban};
+	--DrylandCropland: #{$DrylandCropland};
+	--IrrigatedCropland: #{$IrrigatedCropland};
+	--MixedDryland: #{$MixedDryland};
+	--CroplandGrassland: #{$CroplandGrassland};
+	--CroplandWoodland: #{$CroplandWoodland};
+	--Grassland: #{$Grassland};
+	--Shrubland: #{$Shrubland};
+	--MixedShrubland: #{$MixedShrubland};
+	--Savanna: #{$Savanna};
+	--DeciduousBroadleaf: #{$DeciduousBroadleaf};
+	--DeciduousNeedleleaf: #{$DeciduousNeedleleaf};
+	--EvergreenBroadleaf: #{$EvergreenBroadleaf};
+	--EvergreenNeedleleaf: #{$EvergreenNeedleleaf};
+	--MixedForest: #{$MixedForest};
+	--WaterBodies: #{$WaterBodies};
+	--HerbaceousWetland: #{$HerbaceousWetland};
+	--WoodedWetland: #{$WoodedWetland};
+	--Barrenor: #{$Barrenor};
+	--HerbaceousTundra: #{$HerbaceousTundra};
+	--WoodedTundra: #{$WoodedTundra};
+	--MixedTundra: #{$MixedTundra};
+	--BareGround: #{$BareGround};
+}
