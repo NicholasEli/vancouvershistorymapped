@@ -26,6 +26,8 @@ export const Map = () => {
 	const map = L.map('map', {
 		center: [45.6325949, -122.666855],
 		zoom: 15,
+		zoomControl: false,
+		attributionControl: false,
 	});
 
 	L.tileLayer.provider('Stamen.Terrain').addTo(map);
