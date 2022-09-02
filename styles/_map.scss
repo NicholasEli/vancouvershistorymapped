@@ -1,4 +1,8 @@
 #map {
 	width: 100vw;
 	height: 600px;
+
+	.leaflet-control-container {
+		display: none;
+	}
 }
