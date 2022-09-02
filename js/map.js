@@ -28,10 +28,15 @@ export const Map = () => {
 		zoom: 15,
 	});
 
+	L.tileLayer.provider('Stamen.Terrain').addTo(map);
+
+	/**
+	 * Adds Google Maps Theme
 	const googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
 		maxZoom: 20,
 		subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
 	});
+
 	googleStreets.addTo(map);
 
 	// Satelite Layer
@@ -41,9 +46,8 @@ export const Map = () => {
 	});
 	googleSat.addTo(map);
 
-	L.tileLayer.provider('Stamen.Terrain').addTo(map);
-	/**
-	 * Adds Google Maps Theme
+	
+	
 	const baseLayers = {
 		Satellite: googleSat,
 		'Google Map': googleStreets,
