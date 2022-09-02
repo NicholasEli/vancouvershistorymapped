@@ -1,12 +1,3 @@
-const Stadia_AlidadeSmooth = L.tileLayer(
-	'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png',
-	{
-		maxZoom: 20,
-		attribution:
-			'&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-	}
-);
-
 const Stamen_TonerBackground = L.tileLayer(
 	'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}',
 	{
@@ -50,7 +41,7 @@ export const Map = () => {
 	});
 	googleSat.addTo(map);
 
-	L.tileLayer.provider('Stadia.AlidadeSmooth').addTo(map);
+	L.tileLayer.provider('Stamen.TonerBackground').addTo(map);
 	/**
 	 * Adds Google Maps Theme
 	const baseLayers = {
