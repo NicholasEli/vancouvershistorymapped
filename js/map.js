@@ -41,7 +41,7 @@ export const Map = () => {
 	});
 	googleSat.addTo(map);
 
-	L.tileLayer.provider('Stamen.TonerBackground').addTo(map);
+	L.tileLayer.provider('Stamen.Terrain').addTo(map);
 	/**
 	 * Adds Google Maps Theme
 	const baseLayers = {
