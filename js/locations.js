@@ -7,6 +7,7 @@ export const Locations = {
 		year: null,
 		tags: ['downtown vancouver', 'main street', 'main st'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.6734442,-122.6631379': {
@@ -17,6 +18,7 @@ export const Locations = {
 		year: 1977,
 		tags: ['hazel dell', 'highway 99', 'old highway 99', 'steak burger'],
 		extension: 'png',
+		type: '',
 		photos: [],
 	},
 	'45.666891,-122.664214': {
@@ -27,6 +29,7 @@ export const Locations = {
 		year: 1977,
 		tags: ['hazel dell', 'highway 99', 'old highway 99', 'muchos gracias'],
 		extension: 'png',
+		type: '',
 		photos: [],
 	},
 	'45.621872,-122.673135': {
@@ -37,6 +40,7 @@ export const Locations = {
 		year: 1917,
 		tags: ['i5', 'bridge'],
 		extension: 'png',
+		type: '',
 		photos: [
 			{ id: '45.621872,-122.673135,1', extension: 'jpeg', title: 'Washington Oregon Bridge' },
 			{ id: '45.621872,-122.673135,2', extension: 'jpeg', title: 'Washington Oregon Bridge' },
@@ -50,6 +54,7 @@ export const Locations = {
 		year: 1977,
 		tags: ['Kooky Chicken & Pho KC', 'mill plain', 'arcade'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.6286784,-122.6727252': {
@@ -60,6 +65,7 @@ export const Locations = {
 		year: 1937,
 		tags: ['downtown vancouver', 'main street', 'main st'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.630349,-122.677054': {
@@ -70,6 +76,7 @@ export const Locations = {
 		year: 1850,
 		tags: ['downtown vancouver', 'franklin st', 'franklin street'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.625599,-122.635793': {
@@ -80,6 +87,7 @@ export const Locations = {
 		year: 1890,
 		tags: ['harney elementary'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.630774,-122.674948': {
@@ -90,6 +98,7 @@ export const Locations = {
 		year: 1894,
 		tags: ['harney elementary'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.628358,-122.659312': {
@@ -113,6 +122,7 @@ export const Locations = {
 		year: 1890,
 		tags: ['franklin st', 'franklin street'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.631069,-122.677068': {
@@ -133,6 +143,7 @@ export const Locations = {
 		year: 1890,
 		tags: ['amtrak', 'downtown vancouver'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 	'45.627233,-122.664574': {
@@ -143,6 +154,7 @@ export const Locations = {
 		year: 1890,
 		tags: ['vancouver barracks', 'ft vancouver'],
 		extension: 'jpeg',
+		type: '',
 		photos: [],
 	},
 };
