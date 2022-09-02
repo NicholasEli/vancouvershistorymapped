@@ -16,8 +16,8 @@ const Stamen_Terrain = L.tileLayer(
 		attribution:
 			'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		subdomains: 'abcd',
-		minZoom: 0,
-		maxZoom: 18,
+		minZoom: 17,
+		maxZoom: 17,
 		ext: 'png',
 	}
 );
@@ -25,7 +25,9 @@ const Stamen_Terrain = L.tileLayer(
 export const Map = () => {
 	const map = L.map('map', {
 		center: [45.6325949, -122.666855],
-		zoom: 15,
+		zoom: 17,
+		minZoom: 17,
+		maxZoom: 17,
 		zoomControl: false,
 		attributionControl: false,
 	});
