@@ -62,7 +62,7 @@
 		white-space: nowrap;
 
 		&-item {
-			width: auto;
+			width: fit-content;
 			height: calc(100vh - 200px);
 			max-height: 600px;
 			display: inline-block;

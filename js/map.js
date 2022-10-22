@@ -13,6 +13,21 @@ const Esri_WorldGrayCanvas = L.tileLayer(
 	}
 );
 
+export const setWH = function () {
+	const map = document.querySelector('[data-map]');
+	if (!map) return;
+
+	console.log(map);
+
+	map.style.width = window.innerWidth + 'px';
+	map.style.height = window.innerHeight + 'px';
+
+	window.addEventListener('resize', () => {
+		map.style.width = window.innerWidth + 'px';
+		map.style.height = window.innerHeight + 'px';
+	});
+};
+
 /**
  * Map - renders map to dom
  * https://leafletjs.com/reference.html
