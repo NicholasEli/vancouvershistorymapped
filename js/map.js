@@ -1,23 +1,14 @@
-const Stamen_TonerBackground = L.tileLayer(
-	'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}',
-	{
-		attribution:
-			'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		subdomains: 'abcd',
-		minZoom: 0,
-		maxZoom: 20,
-		ext: 'png',
-	}
-);
+const zoom = 13;
+const minZoom = 0;
+const maxZoom = 20;
 
-const Stamen_Terrain = L.tileLayer(
-	'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}',
+const Esri_WorldGrayCanvas = L.tileLayer(
+	'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
 	{
-		attribution:
-			'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
 		subdomains: 'abcd',
-		minZoom: 17,
-		maxZoom: 17,
+		minZoom,
+		maxZoom,
 		ext: 'png',
 	}
 );
@@ -30,12 +21,12 @@ const Stamen_Terrain = L.tileLayer(
 export const Map = function ({ latitude, longitude }) {
 	const map = L.map('map', {
 		center: [latitude, longitude],
-		zoom: 17,
-		minZoom: 17,
-		maxZoom: 17,
+		zoom,
+		minZoom,
+		maxZoom,
 		scrollWheelZoom: false,
 		touchZoom: false,
-		zoomControl: false,
+		//zoomControl: false,
 		boxZoom: false,
 		trackResize: false,
 		doubleClickZoom: false,
@@ -43,7 +34,7 @@ export const Map = function ({ latitude, longitude }) {
 		attributionControl: false,
 	});
 
-	L.tileLayer.provider('Stamen.Terrain').addTo(map);
+	L.tileLayer.provider('Esri.WorldGrayCanvas').addTo(map);
 
 	console.log('---Map Intialized');
 	return map;
