@@ -57,22 +57,19 @@ const modalUI = async function (active) {
 	if (!modal) return;
 
 	if (active) {
-		modal.classList.add('animate__fadeInDown__absolute');
+		modal.classList.add('modal--active');
 		return;
 	}
 
-	// modal.classList.add('animate__fadeOutUp__absolute');
-	// await asyncTimeout(500);
-	// modal.classList.remove('animate__fadeOutUp__absolute');
-	// modal.classList.remove('animate__fadeInDown__absolute');
+	modal.classList.remove('modal--active');
 };
 
 export const closeModal = function () {
-	// const btn = document.querySelector('[data-btn="modal-close"]');
-	// if (!btn) return;
-	// btn.addEventListener('click', () => {
-	// 	state.setActive = false;
-	// });
+	const btn = document.querySelector('[data-btn="modal-close"]');
+	if (!btn) return;
+	btn.addEventListener('click', () => {
+		state.setActive = false;
+	});
 };
 
 export const Modal = function (marker) {

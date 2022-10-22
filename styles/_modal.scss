@@ -9,9 +9,13 @@
 	background-color: $gray;
 	z-index: 10;
 	box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	transition: top 2s ease-out, opacity 500ms ease-out 0ms;
 
-	&.animate__fadeInDown__absolute {
+	&.modal--active {
 		top: 50%;
+		opacity: 1;
+		transition: top 1s ease-in-out, opacity 500ms ease-in 750ms;
 	}
 
 	&__header {
