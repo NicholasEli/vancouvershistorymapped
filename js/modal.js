@@ -55,7 +55,7 @@ const scrollUI = function (location) {
 const modalUI = async function (active) {
 	const modal = document.querySelector('[data-modal]');
 	if (!modal) return;
-
+	console.log('clicked');
 	if (active) {
 		modal.classList.add('animate__fadeInDown__absolute');
 		return;
