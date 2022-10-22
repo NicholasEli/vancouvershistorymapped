@@ -2,7 +2,7 @@
 	width: calc(100% - #{$padding * 2});
 	max-width: $md;
 	max-height: calc(100vh - 100px);
-	position: fixed;
+	position: absolute;
 	top: -200%;
 	left: 50%;
 	transform: translate(-50%, -50%);
