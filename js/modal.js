@@ -43,10 +43,10 @@ const scrollUI = function (location) {
 
 		item.appendChild(image);
 
-		const paragraph = document.createElement('p');
-		paragraph.innerText = photo.title;
+		const h6 = document.createElement('h6');
+		h6.innerText = photo.title;
 
-		item.appendChild(paragraph);
+		item.appendChild(h6);
 
 		scroll.appendChild(item);
 	});
