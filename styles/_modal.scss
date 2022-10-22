@@ -8,4 +8,19 @@
 	transform: translate(-50%, -50%);
 	background-color: $gray;
 	z-index: 10;
+
+	&__scroll {
+		overflow-x: auto;
+
+		&-item {
+			width: auto;
+			height: 300px;
+
+			img {
+				width: auto;
+				height: 100%;
+				display: block;
+			}
+		}
+	}
 }
