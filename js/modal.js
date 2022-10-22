@@ -1,11 +1,12 @@
 import { Locations } from './locations.js';
+import { asyncTimeout } from './utils.js';
 
 const state = {
 	active: false,
 	location: null,
 	set setActive(active = false) {
 		this.active = active;
-		modalActive(active);
+		modalUI(active);
 	},
 	set setLocation(latlng = null) {
 		if (latlng) {
@@ -42,18 +43,28 @@ const scrollUI = function (location) {
 
 		item.appendChild(image);
 
+		const paragraph = document.createElement('p');
+		paragraph.innerText = photo.title;
+
+		item.appendChild(paragraph);
+
 		scroll.appendChild(item);
 	});
 };
 
-const modalActive = function (active) {
+const modalUI = async function (active) {
 	const modal = document.querySelector('[data-modal]');
 	if (!modal) return;
 
 	if (active) {
-		//modal.classList.add('');
+		modal.classList.add('animate__fadeInDown__absolute');
 		return;
 	}
+
+	modal.classList.add('animate__fadeOutUp');
+	await asyncTimeout(500);
+	modal.classList.remove('animate__fadeOutUp');
+	modal.classList.remove('animate__fadeInDown__absolute');
 };
 
 export const Modal = function (marker) {

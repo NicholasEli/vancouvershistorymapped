@@ -3,11 +3,44 @@
 	max-width: $md;
 	max-height: calc(100vh - 100px);
 	position: fixed;
-	top: 50%;
+	top: -200%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -100%);
 	background-color: $gray;
 	z-index: 10;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+
+	&.animate__fadeInDown__absolute {
+		top: 50%;
+	}
+
+	&__header {
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+
+	&__body {
+		.row {
+			position: relative;
+
+			&::after {
+				content: '';
+				width: 25px;
+				height: 300px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: linear-gradient(
+					90deg,
+					transparent 20%,
+					rgba(0, 0, 0, 0.3) 39%,
+					rgba(0, 0, 0, 0.3) 100%
+				);
+				pointer-events: none;
+			}
+		}
+	}
 
 	&__scroll {
 		overflow-x: auto;
@@ -17,11 +50,24 @@
 			width: auto;
 			height: 300px;
 			display: inline-block;
+			padding: 0 10px;
+
+			&:first-of-type {
+				padding-left: 0;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
 
 			img {
 				width: auto;
 				height: 100%;
 				display: block;
+			}
+
+			p {
+				margin-top: calc($padding / 2);
 			}
 		}
 	}
