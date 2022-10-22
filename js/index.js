@@ -1,12 +1,19 @@
 import { getLocation } from './user.js';
-import { Map, setWH } from './Map.js';
+import { Map } from './Map.js';
 import { Markers } from './markers.js';
 import { closeModal } from './modal.js';
 
 window.onload = async function () {
 	console.log('---Initializing Javascript');
+	const resize = () => {
+		const canvas = document.querySelector('[data-map]');
+		canvas.style.width = window.innerWidth + 'px';
+		canvas.style.height = window.innerHeight + 'px';
+		document.body.style.width = window.innerWidth + 'px';
+		document.body.style.height = window.innerHeight + 'px';
+	};
 
-	setWH();
+	resize();
 
 	const location = await getLocation();
 
@@ -14,7 +21,15 @@ window.onload = async function () {
 	console.log('---User Location');
 
 	closeModal();
-	const map = Map(location.coords);
-	const markers = Markers(map);
+	let map = Map(location.coords);
+	let markers = Markers(map);
+
+	window.addEventListener('resize', () => {
+		resize();
+		map.remove();
+		map = Map(location.coords);
+		markers = Markers(map);
+	});
+
 	console.log('---Javascript Loaded');
 };
