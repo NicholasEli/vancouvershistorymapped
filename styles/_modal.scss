@@ -63,7 +63,8 @@
 
 		&-item {
 			width: fit-content;
-			height: calc(100vh - 200px);
+			height: calc(100vh - 450px);
+			min-height: 180px;
 			max-height: 600px;
 			display: inline-block;
 			padding: 0 10px;
