@@ -29,8 +29,13 @@ const scrollUI = function (location) {
 	const header = document.querySelector('[data-header="modal-title"]');
 	if (!header) return;
 
-	const { title, photos } = location;
-	header.innerText = title;
+	const { year, title, photos } = location;
+
+	if (year) {
+		header.innerText = year + ' - ' + title;
+	} else {
+		header.innerText = title;
+	}
 
 	scroll.innerHTML = '';
 	photos.forEach((photo) => {

@@ -6,9 +6,8 @@ export const Locations = {
 		address: null,
 		year: null,
 		tags: ['downtown vancouver', 'main street', 'main st'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.625801,-122.671646', extension: 'jpeg', title: 'Main Street' }],
 	},
 	'45.6734442,-122.6631379': {
 		title: 'Steak Burger',
@@ -17,9 +16,10 @@ export const Locations = {
 		address: null,
 		year: 1977,
 		tags: ['hazel dell', 'highway 99', 'old highway 99', 'steak burger'],
-		extension: 'png',
 		type: '',
-		photos: [],
+		photos: [
+			{ id: '45.6734442,-122.6631379', extension: 'png', title: 'Hazell Dell Steak Burger' },
+		],
 	},
 	'45.666891,-122.664214': {
 		title: 'A&W',
@@ -28,9 +28,10 @@ export const Locations = {
 		address: null,
 		year: 1977,
 		tags: ['hazel dell', 'highway 99', 'old highway 99', 'muchos gracias'],
-		extension: 'png',
 		type: '',
-		photos: [],
+		photos: [
+			{ id: '45.666891,-122.664214', extension: 'jpeg', title: 'Hazel Dell Muchos Gracias' },
+		],
 	},
 	'45.621872,-122.673135': {
 		title: 'Washington Oregon Bridge',
@@ -39,7 +40,6 @@ export const Locations = {
 		address: null,
 		year: 1917,
 		tags: ['i5', 'bridge'],
-		extension: 'png',
 		type: '',
 		photos: [
 			{ id: '45.621872,-122.673135,1', extension: 'jpeg', title: 'Washington Oregon Bridge' },
@@ -53,9 +53,14 @@ export const Locations = {
 		address: '8606 East Mill Plain',
 		year: 1977,
 		tags: ['Kooky Chicken & Pho KC', 'mill plain', 'arcade'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [
+			{
+				id: '45.6234226,-122.5846574',
+				extension: 'jpeg',
+				title: 'Mill Plain Kooky Chicken & Pho KC',
+			},
+		],
 	},
 	'45.6286784,-122.6727252': {
 		title: 'Washington Oregon Bridge',
@@ -64,9 +69,8 @@ export const Locations = {
 		address: '',
 		year: 1937,
 		tags: ['downtown vancouver', 'main street', 'main st'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.6286784,-122.6727252', extension: 'jpeg', title: 'Main Street' }],
 	},
 	'45.630349,-122.677054': {
 		title: 'Clark County Court House',
@@ -75,9 +79,8 @@ export const Locations = {
 		address: '',
 		year: 1850,
 		tags: ['downtown vancouver', 'franklin st', 'franklin street'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.630349,-122.677054', extension: 'jpeg', title: 'Clark County Court House' }],
 	},
 	'45.625599,-122.635793': {
 		title: 'Harney Highschool',
@@ -86,9 +89,8 @@ export const Locations = {
 		address: '',
 		year: 1890,
 		tags: ['harney elementary'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.625599,-122.635793', extension: 'jpeg', title: 'Harney Elementary' }],
 	},
 	'45.630774,-122.674948': {
 		title: 'Vancouver Post Office',
@@ -96,10 +98,9 @@ export const Locations = {
 		lng: -122.674948,
 		address: '',
 		year: 1894,
-		tags: ['harney elementary'],
-		extension: 'jpeg',
+		tags: ['post office'],
 		type: '',
-		photos: [],
+		photos: [{ id: '45.630774,-122.674948', extension: 'jpeg', title: 'Downtown Post Office' }],
 	},
 	'45.628358,-122.659312': {
 		title: 'Officers Row',
@@ -108,7 +109,6 @@ export const Locations = {
 		address: '',
 		year: 1890,
 		tags: ['officers row', 'fort vancouver', 'ft vancouver', 'vancouver barracks'],
-		extension: 'jpeg',
 		photos: [
 			{ id: '45.628358,-122.659312,1', extension: 'jpeg', title: '14th Infantry Division' },
 			{ id: '45.628358,-122.659312,2', extension: 'jpeg', title: 'Officers Row' },
@@ -121,9 +121,8 @@ export const Locations = {
 		address: '',
 		year: 1890,
 		tags: ['franklin st', 'franklin street'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.645239,-122.676795', extension: 'jpeg', title: 'Franklin Street' }],
 	},
 	'45.631069,-122.677068': {
 		title: '13th & Franklin St - School',
@@ -132,8 +131,9 @@ export const Locations = {
 		address: '',
 		year: 1890,
 		tags: ['franklin st', 'franklin street', '13th street', 'downtown vancouver', 'school'],
-		extension: 'jpeg',
-		photos: [],
+		photos: [
+			{ id: '45.631069,-122.677068', extension: 'jpeg', title: '13th & Franklin St - School' },
+		],
 	},
 	'45.629675,-122.685686': {
 		title: 'West 11th St',
@@ -142,9 +142,8 @@ export const Locations = {
 		address: '',
 		year: 1890,
 		tags: ['amtrak', 'downtown vancouver'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.629675,-122.685686', extension: 'jpeg', title: 'Amtrak' }],
 	},
 	'45.627233,-122.664574': {
 		title: 'Vancouver Barracks',
@@ -153,8 +152,7 @@ export const Locations = {
 		address: '',
 		year: 1890,
 		tags: ['vancouver barracks', 'ft vancouver'],
-		extension: 'jpeg',
 		type: '',
-		photos: [],
+		photos: [{ id: '45.627233,-122.664574', extension: 'jpeg', title: 'Vancouver Barracks' }],
 	},
 };
