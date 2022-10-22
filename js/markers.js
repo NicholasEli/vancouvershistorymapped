@@ -5,9 +5,13 @@ export const Markers = function (Map) {
 	const markers = [];
 
 	for (const location in Locations) {
-		const { lat, lng } = Locations[location];
-		const marker = L.marker([lat, lng]).addTo(Map).on('click', Modal);
-		markers.push(marker);
+		const { lat, lng, photos } = Locations[location];
+
+		if (photos && photos.length) {
+			const marker = L.marker([lat, lng]).addTo(Map).on('click', Modal);
+
+			markers.push(marker);
+		}
 	}
 
 	return markers;

@@ -5,5 +5,4 @@ export const Modal = function (marker) {
 
 	const { latlng } = marker;
 	const location = Locations[`${latlng.lat},${latlng.lng}`];
-	console.log(location);
 };
