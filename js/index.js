@@ -1,6 +1,7 @@
 import { getLocation } from './user.js';
 import { Map } from './Map.js';
 import { Markers } from './markers.js';
+import { closeModal } from './modal.js';
 
 window.onload = async function () {
 	console.log('---Initializing Javascript');
@@ -9,6 +10,7 @@ window.onload = async function () {
 	if (!location || (location && !location.coords)) return;
 	console.log('---User Location');
 
+	closeModal();
 	const map = Map(location.coords);
 	const markers = Markers(map);
 	console.log('---Javascript Loaded');

@@ -61,10 +61,20 @@ const modalUI = async function (active) {
 		return;
 	}
 
-	modal.classList.add('animate__fadeOutUp');
+	modal.classList.add('animate__fadeOutUp__absolute');
 	await asyncTimeout(500);
-	modal.classList.remove('animate__fadeOutUp');
+	modal.classList.remove('animate__fadeOutUp__absolute');
 	modal.classList.remove('animate__fadeInDown__absolute');
+};
+
+export const closeModal = function () {
+	const btn = document.querySelector('[data-btn="modal-close"]');
+
+	if (!btn) return;
+
+	btn.addEventListener('click', () => {
+		state.setActive = false;
+	});
 };
 
 export const Modal = function (marker) {
