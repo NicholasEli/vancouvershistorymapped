@@ -25,8 +25,8 @@ window.onload = async function () {
 	let markers = Markers(map);
 
 	window.addEventListener('resize', () => {
-		resize();
 		map.remove();
+		resize();
 		map = Map(location.coords);
 		markers = Markers(map);
 	});
