@@ -2,7 +2,13 @@
 @import '_reset.scss';
 @import '_variables.scss';
 @import '_skeleton.scss';
+@import '_animate.scss';
 @import '_map.scss';
+@import '_modal.scss';
+
+* {
+	box-sizing: border-box;
+}
 
 body {
 	width: 100vw;
