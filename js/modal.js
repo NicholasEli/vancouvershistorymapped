@@ -55,26 +55,24 @@ const scrollUI = function (location) {
 const modalUI = async function (active) {
 	const modal = document.querySelector('[data-modal]');
 	if (!modal) return;
-	console.log('clicked');
+
 	if (active) {
 		modal.classList.add('animate__fadeInDown__absolute');
 		return;
 	}
 
-	modal.classList.add('animate__fadeOutUp__absolute');
-	await asyncTimeout(500);
-	modal.classList.remove('animate__fadeOutUp__absolute');
-	modal.classList.remove('animate__fadeInDown__absolute');
+	// modal.classList.add('animate__fadeOutUp__absolute');
+	// await asyncTimeout(500);
+	// modal.classList.remove('animate__fadeOutUp__absolute');
+	// modal.classList.remove('animate__fadeInDown__absolute');
 };
 
 export const closeModal = function () {
-	const btn = document.querySelector('[data-btn="modal-close"]');
-
-	if (!btn) return;
-
-	btn.addEventListener('click', () => {
-		state.setActive = false;
-	});
+	// const btn = document.querySelector('[data-btn="modal-close"]');
+	// if (!btn) return;
+	// btn.addEventListener('click', () => {
+	// 	state.setActive = false;
+	// });
 };
 
 export const Modal = function (marker) {
