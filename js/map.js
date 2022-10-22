@@ -1,6 +1,6 @@
-const zoom = 13;
+const zoom = 16;
 const minZoom = 0;
-const maxZoom = 20;
+const maxZoom = 16;
 
 const Esri_WorldGrayCanvas = L.tileLayer(
 	'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
@@ -26,7 +26,7 @@ export const Map = function ({ latitude, longitude }) {
 		maxZoom,
 		scrollWheelZoom: false,
 		touchZoom: false,
-		//zoomControl: false,
+		zoomControl: false,
 		boxZoom: false,
 		trackResize: false,
 		doubleClickZoom: false,
