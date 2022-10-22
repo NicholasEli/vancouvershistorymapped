@@ -11,10 +11,12 @@
 
 	&__scroll {
 		overflow-x: auto;
+		white-space: nowrap;
 
 		&-item {
 			width: auto;
 			height: 300px;
+			display: inline-block;
 
 			img {
 				width: auto;
