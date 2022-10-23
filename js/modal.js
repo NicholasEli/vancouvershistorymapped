@@ -31,6 +31,8 @@ const scrollUI = function (location) {
 
 	const { year, title, photos } = location;
 
+	if (photos.length < 2) scroll.parentElement.classList.add('row--single-item');
+
 	if (year) {
 		header.innerText = year + ' - ' + title;
 	} else {

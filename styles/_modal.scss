@@ -17,6 +17,38 @@
 		transition: top 1s ease-in-out, opacity 500ms ease-in 750ms;
 	}
 
+	&__scroll {
+		overflow-x: auto;
+		white-space: nowrap;
+
+		&-item {
+			width: fit-content;
+			height: calc(100vh - 450px);
+			min-height: 180px;
+			max-height: 600px;
+			display: inline-block;
+			padding: 0 10px;
+
+			&:first-of-type {
+				padding-left: 0;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
+
+			img {
+				width: auto;
+				height: 100%;
+				display: block;
+			}
+
+			h6 {
+				margin-top: calc($padding / 2);
+			}
+		}
+	}
+
 	&__header {
 		.col-xs-12 {
 			overflow: hidden;
@@ -54,37 +86,23 @@
 				);
 				pointer-events: none;
 			}
-		}
-	}
 
-	&__scroll {
-		overflow-x: auto;
-		white-space: nowrap;
+			&--single-item {
+				&::after {
+					content: none;
+				}
 
-		&-item {
-			width: fit-content;
-			height: calc(100vh - 450px);
-			min-height: 180px;
-			max-height: 600px;
-			display: inline-block;
-			padding: 0 10px;
+				.modal__scroll-item {
+					width: 100%;
+					max-width: 100%;
+					height: auto;
+					min-height: none;
+					max-height: none;
 
-			&:first-of-type {
-				padding-left: 0;
-			}
-
-			&:last-of-type {
-				padding-right: 0;
-			}
-
-			img {
-				width: auto;
-				height: 100%;
-				display: block;
-			}
-
-			h6 {
-				margin-top: calc($padding / 2);
+					img {
+						margin: 0 auto;
+					}
+				}
 			}
 		}
 	}
