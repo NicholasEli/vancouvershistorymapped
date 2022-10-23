@@ -6,9 +6,10 @@ import { closeModal } from './modal.js';
 window.onload = async function () {
 	console.log('---Initializing Javascript');
 	const resize = () => {
+		const header = document.querySelector('header');
 		const canvas = document.querySelector('[data-map]');
 		canvas.style.width = window.innerWidth + 'px';
-		canvas.style.height = window.innerHeight + 'px';
+		canvas.style.height = window.innerHeight - header.innerHeight + 'px';
 		document.body.style.width = window.innerWidth + 'px';
 		document.body.style.height = window.innerHeight + 'px';
 	};

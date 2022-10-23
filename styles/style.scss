@@ -17,3 +17,44 @@ body {
 	overflow: hidden;
 	font-family: 'PT Sans Narrow';
 }
+
+header {
+	background-color: $primary;
+
+	.container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.tower {
+		width: auto;
+		height: 100%;
+
+		svg {
+			width: auto;
+			height: 50px;
+			display: block;
+
+			path,
+			rect,
+			circle {
+				stroke: var(--DrylandCropland);
+			}
+		}
+	}
+
+	h1 {
+		margin: 0 0 0 $padding;
+		color: var(--DrylandCropland);
+		font-size: 2rem;
+
+		@media (min-width: #{$sm}) {
+			font-size: 3rem;
+		}
+
+		@media (min-width: #{$sm}) {
+			font-size: 4rem;
+		}
+	}
+}
