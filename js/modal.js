@@ -46,7 +46,12 @@ const scrollUI = function (location) {
 
 		const image = document.createElement('img');
 		image.src = `assets/latlng-photos/${photo.id}.${photo.extension}`;
-		image.alt = photo.title;
+
+		if (year) {
+			image.alt = year + ' - ' + photo.title;
+		} else {
+			image.alt = photo.title;
+		}
 
 		item.appendChild(image);
 
