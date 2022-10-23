@@ -18,11 +18,14 @@ window.onload = async function () {
 
 	const location = await getLocation();
 
-	if (!location || (location && !location.coords)) return;
+	let coords = location.coords;
+	if (!location || (location && !location.coords)) {
+		coords = { latitude: 45.625801, longitude: -122.671646 };
+	}
 	console.log('---User Location');
 
 	closeModal();
-	let map = Map(location.coords);
+	let map = Map(coords);
 	let markers = Markers(map);
 
 	window.addEventListener('resize', () => {
