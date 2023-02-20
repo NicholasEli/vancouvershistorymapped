@@ -2,7 +2,7 @@ export const asyncTimeout = function (ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-export const haversineDistance = function (coords1, coords2, isMiles) {
+export const distanceBetweenPoints = function (coords1, coords2, isMiles) {
   function toRad(x) {
     return (x * Math.PI) / 180;
   }

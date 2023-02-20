@@ -25,7 +25,7 @@ window.onload = async function () {
 	}
 	console.log('---User Location');
 
-	viewer();
+	viewer(coords);
 
 	closeModal();
 	let map = Map(coords);
