@@ -5,7 +5,6 @@ let swiper = null;
 
 const viewerUI = function (location) {
 	const mediaContainer = document.querySelector('[data-viewer-media]');
-	if (!mediaContainer) return;
 
 	location.photos.forEach((photo) => {
 		const container = document.createElement('div');
@@ -51,11 +50,15 @@ const getNerbyLocations = function (coords) {
 	return locations;
 };
 
-export const viewer = function (coords) {
-	if (!coords) return;
+export const viewer = async function (coords) {
+	const mediaContainer = document.querySelector('[data-viewer-media]');
+
+	if (!coords || !mediaContainer) return;
+
 	const locations = getNerbyLocations(coords);
 
 	if (locations && locations.length) {
+		mediaContainer.innerHTML = '';
 		locations.forEach((location) => {
 			viewerUI(location);
 		});
