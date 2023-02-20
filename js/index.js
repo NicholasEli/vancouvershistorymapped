@@ -2,6 +2,7 @@ import { getLocation } from './user.js';
 import { Map } from './Map.js';
 import { Markers } from './markers.js';
 import { closeModal } from './modal.js';
+import { viewer } from './viewer.js';
 
 window.onload = async function () {
 	console.log('---Initializing Javascript');
@@ -23,6 +24,8 @@ window.onload = async function () {
 		coords = { latitude: 45.625801, longitude: -122.671646 };
 	}
 	console.log('---User Location');
+
+	viewer();
 
 	closeModal();
 	let map = Map(coords);
