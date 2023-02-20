@@ -5,7 +5,67 @@
 	top: 0;
 	left: 0;
 	z-index: 9;
-	background-color: #fff;
+	background-color: $primary;
+
+	.swiper {
+		height: 100%;
+
+		&--peak {
+			.swiper-wrapper {
+				-webkit-animation-name: peak;
+				animation-name: peak;
+				-webkit-animation-iteration-count: 1;
+				animation-iteration-count: 1;
+				-webkit-animation-delay: 0ms;
+				animation-delay: 0ms;
+				-webkit-animation-duration: 2s;
+				animation-duration: 2s;
+
+				@-webkit-keyframes peak {
+					0% {
+						transform: translate3d(0%, 0, 0);
+					}
+
+					25% {
+						transform: translate3d(0%, 0, 0);
+					}
+
+					50% {
+						transform: translate3d(-50%, 0, 0);
+					}
+
+					75% {
+						transform: translate3d(-50%, 0, 0);
+					}
+
+					100% {
+						transform: translate3d(0%, 0, 0);
+					}
+				}
+				@keyframes peak {
+					0% {
+						transform: translate3d(0%, 0, 0);
+					}
+
+					25% {
+						transform: translate3d(0%, 0, 0);
+					}
+
+					50% {
+						transform: translate3d(0%, -50%, 0);
+					}
+
+					75% {
+						transform: translate3d(0%, -50%, 0);
+					}
+
+					100% {
+						transform: translate3d(0%, 0, 0);
+					}
+				}
+			}
+		}
+	}
 
 	&__media {
 		width: 100%;
@@ -30,6 +90,15 @@
 
 				p:empty {
 					display: none;
+				}
+
+				h4,
+				p {
+					margin: 0;
+				}
+
+				p {
+					font-size: 16px;
 				}
 			}
 		}

@@ -55,17 +55,20 @@ export const viewer = function (coords) {
 	if (!coords) return;
 	const locations = getNerbyLocations(coords);
 
-	swiper = new Swiper('.swiper', {
-		direction: 'vertical',
-		loop: true,
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
-	});
-
 	if (locations && locations.length) {
 		locations.forEach((location) => {
 			viewerUI(location);
 		});
+
+		swiper = new Swiper('.swiper', {
+			direction: 'vertical',
+			loop: true,
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		});
+
+		const swiperContainer = document.querySelector('.swiper');
+		swiperContainer.classList.add('swiper--peak');
 	}
 };
