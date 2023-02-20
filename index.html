@@ -26,6 +26,7 @@
 		<link rel="manifest" href="/site.webmanifest" />
 		<title>Vancouvers History Mapped</title>
 		<link rel="stylesheet" href="./styles/leaflet.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./styles/style.min.css" />
 	</head>
 	<body>
@@ -137,9 +138,10 @@
 		</header>
 		<section id="map" data-map></section>
 		<div class="viewer" data-viewer>
-			<div class="viwer__media" data-viwer-body></div>
-			<div class="viwer__container container container--padding">
-				<h4 data-viwer-title></h4>
+			<div class="viwer__media" data-viwer-media></div>
+			<div class="swiper">
+				<div class="swiper-wrapper viwer__media" data-viwer-media></div>
+				<div class="swiper-scrollbar"></div>
 			</div>
 		</div>
 		<div class="modal" data-modal>
@@ -171,6 +173,7 @@
 		</div>
 		<script src="./js/leaflet-src.js"></script>
 		<script src="./js/leaflet-providers.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>
