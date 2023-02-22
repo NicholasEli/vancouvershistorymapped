@@ -1,0 +1,20 @@
+.btn {
+	width: max-content;
+	min-width: 100px;
+	display: block;
+	padding: $padding;
+	border: 1px solid transparent;
+	border-color: transparent;
+	border-radius: 25px;
+	outline: none;
+	appearance: none;
+	text-align: center;
+	font-size: 18px;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 200ms;
+
+	&--round {
+		border-radius: 100%;
+	}
+}

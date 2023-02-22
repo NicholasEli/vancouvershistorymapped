@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;700;900&display=swap');
 @import '_reset.scss';
 @import '_variables.scss';
+@import '_mixins.scss';
 @import '_skeleton.scss';
 @import '_animate.scss';
 @import '_map.scss';
 @import '_modal.scss';
 @import '_viewer.scss';
+@import '_button.scss';
+
+:root {
+	--peak-init: translate3d(0%, 0, 0);
+}
 
 * {
 	box-sizing: border-box;

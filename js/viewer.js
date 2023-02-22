@@ -3,6 +3,22 @@ import { asyncTimeout, distanceBetweenPoints } from './utils.js';
 
 let swiper = null;
 
+const expand = function (event) {
+	const shrinkBtn = document.querySelector('.btn__shrink');
+	const mediaContainer = document.querySelector('[data-viewer-media]');
+	mediaContainer.classList.remove('viewer__media--shrink');
+	event.currentTarget.classList.remove('btn--active');
+	shrinkBtn.classList.add('btn--active');
+};
+
+const shrink = function (event) {
+	const expandBtn = document.querySelector('.btn__expand');
+	const mediaContainer = document.querySelector('[data-viewer-media]');
+	mediaContainer.classList.add('viewer__media--shrink');
+	event.currentTarget.classList.remove('btn--active');
+	expandBtn.classList.add('btn--active');
+};
+
 const viewerUI = function (location) {
 	const mediaContainer = document.querySelector('[data-viewer-media]');
 
@@ -51,6 +67,7 @@ const getNerbyLocations = function (coords) {
 };
 
 export const viewer = async function (coords) {
+	const viewer = document.querySelector('[data-viewer]');
 	const mediaContainer = document.querySelector('[data-viewer-media]');
 
 	if (!coords || !mediaContainer) return;
@@ -71,7 +88,21 @@ export const viewer = async function (coords) {
 			},
 		});
 
+		viewer.classList.add('viewer--loaded');
+
+		/*
+		await asyncTimeout(1000);
+
 		const swiperContainer = document.querySelector('.swiper');
+		const swiperWrapper = document.querySelector('.swiper-wrapper');
+		const styles = window.getComputedStyle(swiperWrapper);
+		const init3D = styles.getPropertyValue('transform');
+		const root = document.querySelector(':root');
+		root.style.setProperty('--peak-init', init3D);
 		swiperContainer.classList.add('swiper--peak');
+		*/
 	}
+
+	window.expand = expand;
+	window.shrink = shrink;
 };
